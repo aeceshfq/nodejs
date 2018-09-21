@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use('/', router);
 
-app.set('port', process.env.PORT);
+app.set('port', process.env.PORT || 5000);
 app.listen(app.get('port'), function() {
     console.log('Listening on port:'+app.get('port')+ ". You simply type url in the browser e.g http://localhost:"+app.get('port')+"/");
 });
